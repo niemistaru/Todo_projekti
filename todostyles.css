@@ -1,0 +1,198 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.container {
+   width: 40%;
+   min-width: 700px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+}
+#otsikko1 {
+    text-align: center;
+    color:darkblue;
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+.todo-form {
+    margin: 40px 0px;
+    background: blueviolet;
+    padding: 25px 30px;
+    border-radius: 10px;
+}
+.add-button {
+    background: deeppink;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 13px;
+    font-size: 1.2rem;
+}
+.todo-items {
+    list-style: none;
+    min-width: 350px;
+    color: black;
+    align-items: center;
+    padding-left: 0px;
+}
+.todo-input {
+    width: 250px;
+    outline: none;
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid;
+    margin-right: 10px;
+
+}
+.todo-input:focus {
+    outline: none;
+    border-color:deeppink;
+}
+
+.todo-item {
+    background: plum;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+.delete-button {
+    float: right;
+    background: white;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding: 3px 8px;
+    line-height: 20px;
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    display: none;
+  }
+
+/* TÄSSÄ TESTAILEN JUTTUJA, ETTÄ VOISKO JO PIKKUHILJAA RUVETA TOIMIMAAN VAI MENEEKS KAIKKI PASKAKS
+*/
+
+.tick {
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    line-height: 20px;
+    
+    /*MINÄ EN SAA NÄITÄ KOHDISTETTUA OIKEIN. LAITOIN TOMMOSEN MARGIN-TOPIN, MUTTA
+    AIKA PURKALTA VAIKUTTAA JA IHAN PASKAA
+    
+    tässä oli tämmönen, mut just tän kans meni asetukset iha tuiks
+        display: flex;
+*/
+}
+.tick::before {
+    content: '✓';
+    font-size: 20px;
+    display: none;
+}
+  
+.done .tick::before {
+    display: inline;
+}
+
+span {
+  margin-left: 10px;
+  font-family: 'Calibri'; 
+  font-size: 18px;
+}
+/*
+NÄMÄ KARSIN YLLÄ OLEVASTA NYT TURHANA 26.10.
+.task-list {
+    padding: 20px;
+    background: plum;
+    border-radius: 10px;
+}
+
+TARVIIKO TÄTÄ?
+.checkbox {
+    margin-right: 1115px;
+}
+*/
+
+
+/*
+NÄÄ OLI SEN EKAN VIDEON MUKAAN, TEEN YLLE UUTTA KOODIA
+#task {
+position: relative;
+padding: 30px 20px;
+}
+
+
+#task input {
+    width: 75%;
+    border: 2px solid;
+    padding: 15px;
+    color:midnightblue;
+    position: relative;
+    border-radius: 10px;
+}
+#task input:focus {
+    outline: none;
+    border-color:deeppink;
+}
+
+#tasks {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    padding: 30px 20px;
+    margin-top: 10px;
+}
+.task{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    background-color: darkcyan;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+}
+
+.delete {
+height: 20px;
+width: 30px;
+}
+
+/* tää oli aluks, kokeilen ylle muuta
+#alltasks {
+    background-color:cornsilk;
+    height: 50px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+*/
