@@ -89,8 +89,7 @@ input[type="checkbox"] {
     display: none;
   }
 
-/* TÄSSÄ TESTAILEN JUTTUJA, ETTÄ VOISKO JO PIKKUHILJAA RUVETA TOIMIMAAN VAI MENEEKS KAIKKI PASKAKS
-*/
+
 
 .tick {
     width: 20px;
@@ -102,10 +101,8 @@ input[type="checkbox"] {
     cursor: pointer;
     line-height: 20px;
     
-    /*MINÄ EN SAA NÄITÄ KOHDISTETTUA OIKEIN. LAITOIN TOMMOSEN MARGIN-TOPIN, MUTTA
-    AIKA PURKALTA VAIKUTTAA JA IHAN PASKAA
-    
-    tässä oli tämmönen, mut just tän kans meni asetukset iha tuiks
+    /*
+    tässä oli tämmönen, mut just tän kans meni asetukset iha väärin
         display: flex;
 */
 }
@@ -130,69 +127,5 @@ NÄMÄ KARSIN YLLÄ OLEVASTA NYT TURHANA 26.10.
     padding: 20px;
     background: plum;
     border-radius: 10px;
-}
-
-TARVIIKO TÄTÄ?
-.checkbox {
-    margin-right: 1115px;
-}
-*/
-
-
-/*
-NÄÄ OLI SEN EKAN VIDEON MUKAAN, TEEN YLLE UUTTA KOODIA
-#task {
-position: relative;
-padding: 30px 20px;
-}
-
-
-#task input {
-    width: 75%;
-    border: 2px solid;
-    padding: 15px;
-    color:midnightblue;
-    position: relative;
-    border-radius: 10px;
-}
-#task input:focus {
-    outline: none;
-    border-color:deeppink;
-}
-
-#tasks {
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    padding: 30px 20px;
-    margin-top: 10px;
-}
-.task{
-    border-radius: 5px;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid;
-    background-color: darkcyan;
-    height: 50px;
-    margin-bottom: 8px;
-    padding: 5px 10px;
-    display: flex;
-}
-
-.delete {
-height: 20px;
-width: 30px;
-}
-
-/* tää oli aluks, kokeilen ylle muuta
-#alltasks {
-    background-color:cornsilk;
-    height: 50px;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    display: flex;
-    border-radius: 10px;
-    align-items: center;
-    justify-content: space-between;
 }
 */
