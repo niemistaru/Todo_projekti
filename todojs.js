@@ -75,9 +75,11 @@ form.addEventListener('submit', event => {
     //select text input
     const input = document.querySelector('.todo-input');
 
-    //get the input value, remove whitespace
+    //validate and remove whitespace
     const text = input.value.trim();
-    if (text !== '') {
+    if (text == "") {
+        alert("Et voi lisätä tyhjää tehtävää, kirjoita jotain.");
+    } else if (text !== '') {
         addTodo(text);
         input.value = '';
         input.focus();
@@ -85,7 +87,7 @@ form.addEventListener('submit', event => {
 
 });
 
-//mark as completed TARU on kokeillut vaihtaa todo-itemsin tilalle todo-input, se ei toimi
+//mark as completed
 const list = document.querySelector('.todo-items');
 list.addEventListener('click', event => {
     if (event.target.classList.contains('js-tick')){ 
@@ -117,6 +119,4 @@ document.addEventListener('DOMContentLoaded', () => {
        }); 
     }
 });
-
-//ADD TO LOCAL STORAGE, NÄÄ ON NYT IHAN SUN OMIA!!!!
 
