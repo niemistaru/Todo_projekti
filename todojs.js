@@ -6,7 +6,7 @@ function renderTodo(todo) {
     //local storage
     localStorage.setItem('todoItemsRef', JSON.stringify(todoItems));
 
-    //select first element on to do-list  TARU KOKEILIN NYT UL-ELEMENTIN LUOKKAA
+    //select first element on to do-list (ul element)
     const list = document.querySelector('.todo-items');
     const item = document.querySelector(`[data-key='${todo.id}']`);
 
@@ -25,10 +25,7 @@ function renderTodo(todo) {
         <span>${todo.text}</span>
         <button class="delete-button">X</button>
     `;
-    //OTIN IMPUTIN JA SPANIN VÄLISTÄ TÄN, MITÄ TÄÄ TEKEE?
-    //
-    //taru tossa tuo tick-juttu ei sit oo siinä vanhassa koodissa, ni tsekkaa pitääks olla joku muu
-    // delete-nappaulan alla yllä olis tämmöne <svg><use href="#delete-icon"></use></svg>
+       
     if (item) {
         list.replaceChild(node, item);
     } else {
@@ -87,27 +84,17 @@ form.addEventListener('submit', event => {
 
 });
 
-//mark as completed
+//mark as completed or delete a todo
 const list = document.querySelector('.todo-items');
 list.addEventListener('click', event => {
     if (event.target.classList.contains('js-tick')){ 
     const itemKey = event.target.parentElement.dataset.key;
     toggleChecked(itemKey);
-}
-
-/*
-const list = document.querySelector('.todo-items');
-list.addEventListener('click', event => {
-    if (event.target.classList.contains('js-tick')){
-    const itemKey = event.target.parentElement.dataset.key;
-    toggleChecked(itemKey);
-} 
- ONKS TÄÄ NYT SAATANA KOKO BLOKKI TURHA HÄ*/
-
-if (event.target.classList.contains('delete-button')) {
-    const itemKey = event.target.parentElement.dataset.key;
-    deleteTodo(itemKey);
-}
+    }
+    if (event.target.classList.contains('delete-button')) {
+        const itemKey = event.target.parentElement.dataset.key;
+        deleteTodo(itemKey);
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
