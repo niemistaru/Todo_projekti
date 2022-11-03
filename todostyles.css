@@ -25,6 +25,7 @@ body {
     background: #7D387D;
     padding: 25px 30px;
     border-radius: 10px;
+    border: solid 3px;
 }
 .add-button {
     background: deeppink;
@@ -40,6 +41,7 @@ body {
     color: black;
     align-items: center;
     padding-left: 0px;
+
 }
 .todo-input {
     width: 250px;
@@ -57,10 +59,10 @@ body {
 
 .todo-item {
     background: #99D17B;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 7px;
+    margin-bottom: 7px;
     border-radius: 5px;
-    
+    border: solid 1px;
 }
 
 ul {
@@ -70,7 +72,7 @@ ul {
 
 .delete-button {
     float: right;
-    background: white;
+    background: #7D387D;
     color: black;
     border: none;
     outline: none;

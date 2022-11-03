@@ -1,2 +1,4 @@
 # Todo_projekti
-Todo List with JS
+
+Project 1: Todo List with JS.
+JavaScript course, Laurea University of Applied Sciences.
