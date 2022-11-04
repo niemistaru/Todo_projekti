@@ -52,10 +52,6 @@ body {
     margin-right: 10px;
 
 }
-.todo-input:focus {
-    outline: none;
-    border-color:deeppink;
-}
 
 .todo-item {
     background: #99D17B;
@@ -103,11 +99,7 @@ input[type="checkbox"] {
     align-items: center;
     cursor: pointer;
     line-height: 20px;
-    
-    /*
-    tässä oli tämmönen, mut just tän kans meni asetukset iha väärin
-        display: flex;
-*/
+
 }
 .tick::before {
     content: '✓';
@@ -124,11 +116,3 @@ span {
   font-family: 'Calibri'; 
   font-size: 18px;
 }
-/*
-NÄMÄ KARSIN YLLÄ OLEVASTA NYT TURHANA 26.10.
-.task-list {
-    padding: 20px;
-    background: plum;
-    border-radius: 10px;
-}
-*/

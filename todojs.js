@@ -71,17 +71,23 @@ form.addEventListener('submit', event => {
     event.preventDefault();
     //select text input
     const input = document.querySelector('.todo-input');
-
-    //validate and remove whitespace
-    const text = input.value.trim();
-    if (text == "") {
-        alert("Et voi lisätä tyhjää tehtävää, kirjoita jotain.");
-    } else if (text !== '') {
+     // validate input
+     const text = input.value;   
+     if (text == "") {
+         alert("Et voi lisätä tyhjää tehtävää, kirjoita jotain.");
+         document.getElementById("task").style.borderColor = "red";
+         return false;
+     } 
+    if (text.length < 3 ) {
+         alert("Tehtävän pitää olla vähintään 3 merkkiä pitkä");
+         document.getElementById("task").style.borderColor = "red";
+         return false;
+     }
+     else {
+        document.getElementById("task").style.borderColor = "black";
         addTodo(text);
         input.value = '';
-        input.focus();
-    }
-
+     }
 });
 
 //mark as completed or delete a todo
