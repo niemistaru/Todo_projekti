@@ -22,10 +22,10 @@ body {
 }
 .todo-form {
     margin: 40px 0px;
-    background: #7D387D;
+    background: #4D7EA8;
     padding: 25px 30px;
     border-radius: 10px;
-    border: solid 3px;
+    border: solid 2px;
 }
 .add-button {
     background: deeppink;
@@ -68,7 +68,7 @@ ul {
 
 .delete-button {
     float: right;
-    background: #7D387D;
+    background: #7E007B;
     color: black;
     border: none;
     outline: none;
@@ -76,7 +76,7 @@ ul {
     padding: 3px 8px;
     line-height: 20px;
     margin-left: 10px;
-    font-size: 1.2rem;
+    font-size: 20px;
     font-weight: 550;
 }
 
