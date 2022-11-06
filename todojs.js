@@ -1,7 +1,7 @@
 //array for todo-items
 let todoItems = [];
 
-//render todos on screen
+//Display todos on screen
 function renderTodo(todo) {
     //local storage
     localStorage.setItem('todoItemsRef', JSON.stringify(todoItems));
@@ -35,7 +35,7 @@ function renderTodo(todo) {
 }
 
 
-// add todo
+//Add todo
 function addTodo(text) {
     const todo = {
         text,
@@ -46,13 +46,14 @@ todoItems.push(todo);
 renderTodo(todo);
 }
 
-//toggle checked
+//Toggle checked/completed todo
 function toggleChecked(key) {
     const index = todoItems.findIndex(item => item.id === Number(key));
     todoItems[index].completed = !todoItems[index].completed;
     renderTodo(todoItems[index]);
 }
 
+//Delete todo
 function deleteTodo(key) {
     const index = todoItems.findIndex(item => item.id === Number(key));
     const todo = {
@@ -63,16 +64,14 @@ function deleteTodo(key) {
     renderTodo(todo);
 }
 
-//select form
+//Form: event listener (submit) + validation
 const form =document.querySelector('.todo-form');
-//submit event listener
 form.addEventListener('submit', event => {
     //prevent refreshing
     event.preventDefault();
-    //select text input
+    //select + validate text input
     const input = document.querySelector('.todo-input');
-     // validate input
-     const text = input.value;   
+    const text = input.value;   
      if (text == "") {
          alert("Et voi lisätä tyhjää tehtävää, kirjoita jotain.");
          document.getElementById("task").style.borderColor = "red";
@@ -90,19 +89,23 @@ form.addEventListener('submit', event => {
      }
 });
 
-//mark as completed or delete a todo
+//Mark todo as completed or delete a todo
+//event listener (click)
 const list = document.querySelector('.todo-items');
 list.addEventListener('click', event => {
+    //mark as checked
     if (event.target.classList.contains('js-tick')){ 
     const itemKey = event.target.parentElement.dataset.key;
     toggleChecked(itemKey);
     }
+    //delete todo
     if (event.target.classList.contains('delete-button')) {
-        const itemKey = event.target.parentElement.dataset.key;
-        deleteTodo(itemKey);
+    const itemKey = event.target.parentElement.dataset.key;
+    deleteTodo(itemKey);
     }
 });
 
+//Display existing todos from local storage when page is loaded
 document.addEventListener('DOMContentLoaded', () => {
     const ref =  localStorage.getItem('todoItemsRef');
     if (ref){
